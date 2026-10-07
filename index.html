@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2563eb">
+<title>IUH DIGITAL — Smart Digital Platform</title>
+<style>
+:root{--blue:#2563eb;--blue2:#1d4ed8;--ink:#172033;--muted:#6b7280;--bg:#f5f8fc;--card:#fff;--line:#e7edf5;--green:#16a34a;--red:#ef4444;--shadow:0 10px 30px rgba(30,64,175,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#eef4ff 0,#f7f9fc 34%,#fff 100%);color:var(--ink);min-height:100vh}.app{max-width:760px;margin:0 auto;min-height:100vh;padding-bottom:88px}.top{display:flex;align-items:center;justify-content:space-between;padding:22px 20px 14px}.welcome{display:flex;gap:12px;align-items:center}.avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#2f6df6,#1d4ed8);color:#fff;display:grid;place-items:center;font-weight:800;font-size:22px;box-shadow:0 7px 20px #2563eb35}.welcome small{display:block;color:#748096;font-size:14px;margin-bottom:2px}.welcome strong{font-size:21px;letter-spacing:-.4px}.brand{display:none}.actions{display:flex;gap:10px}.round{width:50px;height:50px;border:0;border-radius:50%;background:#fff;box-shadow:0 4px 18px #1e3a8a13;font-size:22px;cursor:pointer}.menu{width:50px;height:50px;border:0;border-radius:16px;background:#fff;box-shadow:0 4px 18px #1e3a8a13;font-size:24px;cursor:pointer}.balance{margin:10px 20px 26px;background:linear-gradient(135deg,#2865ed,#2053d9);border-radius:24px;padding:27px 28px 28px;color:#fff;box-shadow:0 18px 34px #2563eb3d;position:relative;overflow:hidden}.balance:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#fff1;right:-80px;top:-80px}.balance .label{font-size:16px;opacity:.92}.amount-row{display:flex;align-items:center;justify-content:space-between;margin-top:4px}.amount{font-size:46px;line-height:1.08;font-weight:850;letter-spacing:-2px}.eye{border:0;background:#ffffff22;color:#fff;width:54px;height:54px;border-radius:50%;font-size:25px;cursor:pointer}.balance-actions{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}.balance-actions button{border:0;border-radius:18px;padding:16px 12px;background:#fff;color:#2760dc;font-size:18px;font-weight:750;cursor:pointer;box-shadow:0 5px 14px #0b2f8012}.section-title{font-size:20px;font-weight:800;margin:0 20px 14px;letter-spacing:-.3px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 20px}.service{min-height:112px;border:1px solid #eaf0f8;border-radius:19px;background:#fff;box-shadow:var(--shadow);padding:13px 7px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;position:relative;transition:.18s}.service:active{transform:scale(.97)}.service .ico{width:42px;height:42px;border-radius:14px;background:#edf4ff;color:#2b66e7;display:grid;place-items:center;font-size:22px}.service span{font-weight:700;font-size:14px;text-align:center}.badge{position:absolute;right:6px;top:6px;border-radius:9px;padding:3px 6px;font-size:9px;font-weight:800;background:#ef4444;color:#fff}.badge.help{background:#d8940d}.promo{margin:30px 20px 20px;border-radius:26px;padding:28px 26px;background:linear-gradient(135deg,#0ea34b,#42ce7b);color:#fff;min-height:205px;position:relative;overflow:hidden;box-shadow:0 18px 35px #16a34a29}.promo:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:#fff12;right:-65px;bottom:-90px}.promo .mini{font-size:34px}.promo h2{margin:10px 0 6px;font-size:26px;letter-spacing:-.5px}.promo p{margin:0;max-width:480px;line-height:1.5;color:#edfff3;font-size:15px}.promo button{margin-top:18px;border:1px solid #ffffff88;background:#ffffff20;color:#fff;border-radius:18px;padding:11px 17px;font-weight:800;font-size:15px;cursor:pointer}.dots{text-align:center;color:#bfc9d8;letter-spacing:6px;font-size:16px;margin:-3px 0 22px}.dots b{color:#2563eb}.info{margin:0 20px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}.info h3{margin:0 0 7px;font-size:17px}.info p{margin:0;color:#6b7280;line-height:1.5;font-size:14px}.bottom{position:fixed;z-index:20;bottom:0;left:50%;transform:translateX(-50%);width:min(760px,100%);height:78px;background:#fff;border-top:1px solid #e8edf4;display:grid;grid-template-columns:repeat(5,1fr);padding:8px 5px max(8px,env(safe-area-inset-bottom));box-shadow:0 -8px 28px #0f172a0c}.nav{border:0;background:transparent;color:#64748b;font-size:12px;font-weight:650;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer}.nav .nicon{font-size:22px;line-height:1}.nav.active{color:#2563eb}.support{position:fixed;z-index:30;right:max(18px,calc((100vw - 760px)/2 + 18px));bottom:92px;width:58px;height:58px;border:0;border-radius:50%;background:#2563eb;color:#fff;font-size:25px;box-shadow:0 12px 25px #2563eb55;cursor:pointer}.toast{position:fixed;z-index:40;left:50%;bottom:94px;transform:translate(-50%,20px);background:#172033;color:#fff;padding:12px 17px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:.2s;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.modal{position:fixed;inset:0;z-index:50;background:#0f172a88;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{background:#fff;width:min(760px,100%);border-radius:26px 26px 0 0;padding:22px 20px 30px;box-shadow:0 -10px 40px #0002}.sheet-head{display:flex;justify-content:space-between;align-items:center}.sheet h2{margin:0;font-size:21px}.close{border:0;background:#eef3fb;width:38px;height:38px;border-radius:50%;font-size:20px}.sheet-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.sheet-list button{border:1px solid var(--line);background:#f8faff;border-radius:14px;padding:14px;text-align:left;font-weight:700;color:var(--ink)}@media(max-width:430px){.top{padding-left:14px;padding-right:14px}.balance{margin-left:14px;margin-right:14px}.section-title{margin-left:14px;margin-right:14px}.services{padding:0 14px;gap:9px}.service{min-height:104px}.service span{font-size:13px}.promo{margin-left:14px;margin-right:14px}.info{margin-left:14px;margin-right:14px}.actions{gap:7px}.round,.menu{width:45px;height:45px}.welcome strong{font-size:18px}.avatar{width:49px;height:49px}.amount{font-size:40px}.support{right:17px}}
+@media(min-width:761px){body{padding-top:8px}.bottom{bottom:14px;border-radius:22px;width:700px}.app{padding-bottom:105px}.support{bottom:110px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="welcome"><div class="avatar">I</div><div><small>Welcome to</small><strong>IUH DIGITAL</strong></div></div>
+    <div class="actions"><button class="round" onclick="toast('Notifications are coming soon')" aria-label="Notifications">🔔</button><button class="round" onclick="toggleTheme()" aria-label="Theme">🌙</button><button class="menu" onclick="openSheet()" aria-label="Menu">☰</button></div>
+  </header>
+
+  <section class="balance">
+    <div class="label">Available Balance</div>
+    <div class="amount-row"><div class="amount" id="balance">₦0.00</div><button class="eye" onclick="toggleBalance()" aria-label="Show or hide balance">👁️</button></div>
+    <div class="balance-actions"><button onclick="toast('Funding will be connected to your payment gateway')">＋ Fund</button><button onclick="toast('Your transaction logs will appear here')">📜 Logs</button></div>
+  </section>
+
+  <h2 class="section-title">Quick Services</h2>
+  <section class="services">
+    <button class="service" onclick="toast('Investment plans are being prepared')"><span class="badge">NEW</span><div class="ico">📈</div><span>Invest</span></button>
+    <button class="service" onclick="toast('Funding will be connected to Paystack')"><span class="badge">HOT</span><div class="ico">💳</div><span>Fund Account</span></button>
+    <button class="service" onclick="toast('Withdrawal service is being prepared')"><div class="ico">💸</div><span>Withdraw</span></button>
+    <button class="service" onclick="toast('Transaction history will appear here')"><div class="ico">🧾</div><span>History</span></button>
+    <button class="service" onclick="toast('Tutorials are coming soon')"><div class="ico">🎓</div><span>Tutorials</span></button>
+    <button class="service" onclick="toast('Support chat is coming soon')"><span class="badge help">HELP</span><div class="ico">💬</div><span>Support</span></button>
+    <button class="service" onclick="toast('Investment plans will appear here')"><div class="ico">💼</div><span>Plans</span></button>
+    <button class="service" onclick="openSheet()"><div class="ico">⚙️</div><span>More</span></button>
+  </section>
+
+  <section class="promo">
+    <div class="mini">💡</div><h2>Smart Digital Investing</h2><p>Manage your digital payments and investment activities from one simple, modern dashboard.</p><button onclick="toast('IUH DIGITAL — Smart Technology. Simple Investment.')">Get Started →</button>
+  </section>
+  <div class="dots"><b>●</b> ● ● ●</div>
+
+  <section class="info"><h3>IUH DIGITAL</h3><p>Smart technology. Simple investment. Your dashboard is ready for the next stage of account, payment and investment features.</p></section>
+</div>
+
+<button class="support" onclick="toast('Support: connect your preferred WhatsApp or live-chat number in the next setup')" aria-label="Support">💬</button>
+<nav class="bottom" aria-label="Main navigation">
+  <button class="nav active" onclick="nav('Home')"><span class="nicon">⌂</span>Home</button>
+  <button class="nav" onclick="nav('Investments')"><span class="nicon">🚀</span>Invest</button>
+  <button class="nav" onclick="nav('Fund')"><span class="nicon">💳</span>Fund</button>
+  <button class="nav" onclick="nav('Logs')"><span class="nicon">📜</span>Logs</button>
+  <button class="nav" onclick="openSheet()"><span class="nicon">👤</span>Profile</button>
+</nav>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeSheet()"><div class="sheet"><div class="sheet-head"><h2>IUH DIGITAL Menu</h2><button class="close" onclick="closeSheet()">×</button></div><div class="sheet-list"><button onclick="toast('Account registration will be connected next')">👤 Create account</button><button onclick="toast('Login will be connected next')">🔐 Sign in</button><button onclick="toast('API dashboard is available in the platform backend')">🔑 API access</button><button onclick="toast('Security settings coming soon')">🛡️ Security</button></div></div></div>
+<div id="toast" class="toast"></div>
+<script>
+let hidden=false;let dark=false;const original='₦0.00';
+function toggleBalance(){hidden=!hidden;document.getElementById('balance').textContent=hidden?'••••••':original}
+function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('show');clearTimeout(window.__t);window.__t=setTimeout(()=>el.classList.remove('show'),2600)}
+function openSheet(){document.getElementById('modal').classList.add('show')}
+function closeSheet(){document.getElementById('modal').classList.remove('show')}
+function nav(name){document.querySelectorAll('.nav').forEach(x=>x.classList.remove('active'));event.currentTarget.classList.add('active');toast(name+' section selected')}
+function toggleTheme(){dark=!dark;document.body.style.background=dark?'#0f172a':'linear-gradient(180deg,#eef4ff 0,#f7f9fc 34%,#fff 100%)';document.body.style.color=dark?'#f8fafc':'#172033';toast(dark?'Dark mode preview':'Light mode')}
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+require("dotenv").config();
+const express=require("express"),helmet=require("helmet"),cors=require("cors"),rateLimit=require("express-rate-limit"),path=require("path");
+const auth=require("./routes/auth"),payments=require("./routes/payments"),refunds=require("./routes/refunds"),admin=require("./routes/admin"),webhooks=require("./routes/webhooks");
+const app=express();const PORT=process.env.PORT||3000;
+app.use(helmet({contentSecurityPolicy:false}));app.use(cors());
+app.use("/v1/webhooks",webhooks);
+app.use(express.json({limit:"100kb"}));
+app.use(rateLimit({windowMs:15*60*1000,limit:300,standardHeaders:true,legacyHeaders:false}));
+app.get("/health",(req,res)=>res.json({success:true,service:"IUH DIGITAL",version:"3.0.0",status:"online"}));
+app.use("/v1/auth",auth);app.use("/v1/payments",payments);app.use("/v1/refunds",refunds);app.use("/v1/admin",admin);
+app.use(express.static(path.join(__dirname,"../public")));
+app.use((err,req,res,next)=>{console.error(err);res.status(500).json({success:false,error:"Internal server error"})});
+app.use((req,res)=>res.status(404).json({success:false,error:"Endpoint not found"}));
+app.listen(PORT,()=>console.log(`IUH DIGITAL running on http://localhost:${PORT}`));
